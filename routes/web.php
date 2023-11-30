@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\PageController as AdminPageController;
 use App\Http\Controllers\Guest\PageController as GuestPageController;
+use App\Http\Controllers\Admin\RestaurantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,9 @@ Route::middleware(['auth', 'verified'])
   ->group(function () {
 
     Route::get('/', [AdminPageController::class, 'index'])->name('home');
+    Route::get('/restaurants', [RestaurantController::class, 'index'])->name('restaurants.index');
+    Route::get('/restaurants/create', [RestaurantController::class, 'create'])->name('restaurants.create');
+    Route::post('/restaurants', [RestaurantController::class, 'store'])->name('restaurants.store');
 
   });
 

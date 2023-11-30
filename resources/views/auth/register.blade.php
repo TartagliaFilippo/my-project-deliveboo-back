@@ -5,8 +5,8 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Registrati') }}</div>
-                    <div class="m-3 text-danger">* Questi campi sono obbligatori</div>
+                    <div class="card-header">Register</div>
+                    <div class="m-3 text-danger">* These fields are required</div>
                     <div class="card-body">
 
                         {{-- Visualizzazione errori --}}
@@ -25,8 +25,7 @@
 
                             {{-- Nome --}}
                             <div class="mb-4 row">
-                                <label for="name"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                                <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
 
                                 <div class="col-md-6">
                                     <input id="name" type="text"
@@ -43,8 +42,7 @@
 
                             {{-- Cognome --}}
                             <div class="mb-4 row">
-                                <label for="lastname"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
+                                <label for="lastname" class="col-md-4 col-form-label text-md-right">Last Name</label>
 
                                 <div class="col-md-6">
                                     <input id="lastname" type="text"
@@ -61,8 +59,7 @@
 
                             {{-- Email --}}
                             <div class="mb-4 row">
-                                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}
-                                    *</label>
+                                <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail *</label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email"
@@ -79,8 +76,7 @@
 
                             {{-- Partita IVA --}}
                             <div class="mb-4 row">
-                                <label for="vat" class="col-md-4 col-form-label text-md-right">{{ __('Vat') }}
-                                    *</label>
+                                <label for="vat" class="col-md-4 col-form-label text-md-right">Vat *</label>
 
                                 <div class="col-md-6">
                                     <input id="vat" type="text"
@@ -97,8 +93,7 @@
 
                             {{-- Password --}}
                             <div class="mb-4 row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}
-                                    *</label>
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Password *</label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
@@ -115,8 +110,7 @@
 
                             {{-- Conferma Password --}}
                             <div class="mb-4 row">
-                                <label for="password-confirm"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}
+                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Confirm Password
                                     *</label>
 
                                 <div class="col-md-6">
@@ -130,9 +124,7 @@
                             <div class="mb-4 row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary" id="register-button"
-                                        on-click="submitForm">
-                                        {{ __('Register') }}
-                                    </button>
+                                        on-click="submitForm">Register</button>
                                 </div>
                             </div>
                         </form>
