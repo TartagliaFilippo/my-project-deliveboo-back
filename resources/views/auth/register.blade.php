@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Register</div>
-                    <div class="m-3 text-danger">* These fields are required</div>
+                    <div class="m-3 text-danger">Fields with "*" are required</div>
                     <div class="card-body">
 
                         {{-- Visualizzazione errori --}}

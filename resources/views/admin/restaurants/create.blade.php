@@ -13,7 +13,7 @@
             </div>
         @endif
 
-        <div class="my-3 text-danger">* These fields are required</div>
+        <div class="my-3 text-danger">Fields with "*" are required</div>
 
         <form action="{{ route('admin.restaurants.store') }}" method="post" enctype="multipart/form-data">
             @csrf
@@ -40,7 +40,7 @@
             </div>
 
             {{-- Tipologia --}}
-            {{-- <div class="mb-3">
+            <div class="mb-3">
                 <label class="form-label">Type of Restaurant*:</label>
                 <div class="d-flex flex-column">
                     @foreach ($types as $type)
@@ -51,7 +51,7 @@
                         </div>
                     @endforeach
                 </div>
-            </div> --}}
+            </div>
 
             {{-- Immagine --}}
             <div class="row">

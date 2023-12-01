@@ -12,9 +12,9 @@
                         <div class="card-body d-flex flex-column align-items-center">
                             <h6 class="card-subtitle mb-2 text-body-secondary">Type of restaurant:</h6>
                             <p>
-                                {{-- @foreach ($restaurant->types as $type)
+                                @foreach ($restaurant->types as $type)
                                     <span class="badge text-bg-info">{{ $type->name }}</span>
-                                @endforeach --}}
+                                @endforeach
                             </p>
                             <p class="card-text">{{ $restaurant->address }}, {{ $restaurant->address_number }}
                             </p>

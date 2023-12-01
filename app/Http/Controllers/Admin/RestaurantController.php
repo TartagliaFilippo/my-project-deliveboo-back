@@ -31,8 +31,8 @@ class RestaurantController extends Controller
      */
     public function create()
     {
-        //$types = Type::all();
-        return view('admin.restaurants.create');
+        $types = Type::all();
+        return view('admin.restaurants.create', compact('types'));
     }
 
     /**

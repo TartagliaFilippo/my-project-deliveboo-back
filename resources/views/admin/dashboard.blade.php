@@ -11,9 +11,13 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <p class="card-text">You are logged in!, <a href="{{ route('admin.restaurants.create') }}">click here</a>
-                        for
-                        register your Restaurant</p>
+                    @if (!$hasRestaurant)
+                        <p class="card-text">You are logged in {{ $userName }}!, <a
+                                href="{{ route('admin.restaurants.create') }}">click here</a>
+                            for register your Restaurant</p>
+                    @else
+                        <p>Welcome back {{ $userName }}! It's always a pleasure to see you</p>
+                    @endif
                 </div>
             </div>
         </div>
