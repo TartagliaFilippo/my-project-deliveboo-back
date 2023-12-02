@@ -139,14 +139,21 @@
     <script>
         const password = document.getElementById('password');
         const passwordConfirm = document.getElementById('password-confirm');
+        const button = document.getElementById('register-button');
 
         passwordConfirm.addEventListener('keyup', function() {
             if (password.value !== passwordConfirm.value) {
                 passwordConfirm.classList.remove('is-valid');
                 passwordConfirm.classList.add('is-invalid');
+                password.classList.remove('is-valid');
+                password.classList.add('is-invalid');
+                button.setAttribute('type', 'button');
             } else {
                 passwordConfirm.classList.remove('is-invalid');
                 passwordConfirm.classList.add('is-valid');
+                password.classList.remove('is-invalid');
+                password.classList.add('is-valid');
+                button.setAttribute('type', 'submit');
             }
         });
     </script>
