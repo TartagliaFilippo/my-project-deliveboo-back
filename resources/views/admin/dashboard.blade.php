@@ -12,8 +12,8 @@
                         </div>
                     @endif
                     @if (!$hasRestaurant)
-                        <p class="card-text">You are logged in {{ $userName }}!, <a
-                                href="{{ route('admin.restaurants.create') }}">click here</a>
+                        <p class="card-text">You are logged in, {{ $userName }}! <a
+                                href="{{ route('admin.restaurants.create') }}">Click here</a>
                             for register your Restaurant</p>
                     @else
                         <p>Welcome back {{ $userName }}! It's always a pleasure to see you</p>
