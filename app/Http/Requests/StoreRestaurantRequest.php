@@ -27,7 +27,7 @@ class StoreRestaurantRequest extends FormRequest
             'name' => ['required', 'string', 'max:50'],
             'address' => ['required', 'string'],
             'address_number' => ['required', 'string'],
-            //'types' => ['required', 'array'],
+            'types' => ['required', 'array'],
             'image' => ['required', 'image'],
             'description' => ['nullable', 'string'],
             'phone' => ['required', 'string', 'min:8', 'max:20'],
@@ -47,8 +47,8 @@ class StoreRestaurantRequest extends FormRequest
             'address_number.require' => 'address number is require',
             'address_number.string' => 'address number must be text',
 
-            //'types.required' => 'types is require',
-            //'types.array' => 'types must be a list among those marked',
+            'types.required' => 'types is require',
+            'types.array' => 'types must be a list among those marked',
 
             'image.required' => 'image is require',
             'image.image' => 'image must be a image',

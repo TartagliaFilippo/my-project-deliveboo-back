@@ -1,1 +1,9 @@
-@import '~bootstrap/scss/bootstrap'
+@import "~bootstrap/scss/bootstrap";
+
+// Index restaurants
+
+.wrapper-restaurants {
+    img {
+        max-width: 100%;
+    }
+}
