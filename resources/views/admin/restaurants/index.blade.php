@@ -22,7 +22,8 @@
                                     <p class="card-text">{{ $restaurant->address }}, {{ $restaurant->address_number }}
                                     </p>
                                     <p class="card-text text-center">{{ $restaurant->description }}</p>
-                                    {{-- <a href="{{ route('admin.plates.index') }}" class="btn btn-primary">Look your menù</a> --}}
+                                    <a href="{{ route('admin.dishes.index') }}" class="btn btn-primary mb-3">Look your
+                                        menù</a>
                                     <div class="phone">
                                         <span class="badge text-bg-success">{{ $restaurant->phone }}</span>
                                     </div>

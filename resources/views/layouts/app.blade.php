@@ -15,6 +15,8 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    @yield('css')
+
     <!-- Usando Vite -->
     @vite(['resources/js/app.js'])
 </head>
@@ -29,6 +31,7 @@
     </div>
     @yield('modals')
     @yield('scripts')
+    @yield('modals')
 </body>
 
 </html>

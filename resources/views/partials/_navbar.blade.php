@@ -28,6 +28,13 @@
                         <a class="nav-link {{ Route::currentRouteName() == 'admin.restaurants.index' ? 'active' : '' }}"
                             href="{{ route('admin.restaurants.index') }}"> Your Restaurant</a>
                     </li>
+                    @if (Auth::check() &&
+                            Auth::user()->restaurant()->exists())
+                        <li class="nav-item">
+                            <a class="nav-link {{ Route::currentRouteName() == 'admin.dishes.index' ? 'active' : '' }}"
+                                href="{{ route('admin.dishes.index') }}">Your Menu</a>
+                        </li>
+                    @endif
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
