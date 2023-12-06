@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DishController;
+use App\Http\Controllers\Guest\OrderController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\PageController as AdminPageController;
@@ -20,7 +21,8 @@ use App\Http\Controllers\Admin\PlateController;
 */
 
 Route::get('/', [GuestPageController::class, 'index'])->name('guest.home');
-
+Route::get('/orders/create', [OrderController::class, 'create'])->name('guest.orders.create');
+Route::post('/orders', [OrderController::class, 'store'])->name('guest.orders.store');
 
 Route::middleware(['auth', 'verified'])
   ->prefix('admin')
