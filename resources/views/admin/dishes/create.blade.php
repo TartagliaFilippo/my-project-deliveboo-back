@@ -1,10 +1,16 @@
 @extends('layouts.app')
 
+@section('css')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+@endsection
+
 @section('content')
     <div class="wrapper-create-dish">
         <div class="container d-flex flex-column">
             <a href="{{ route('admin.dishes.index') }}" class="btn btn-primary align-self-end my-3">
-                Back to Menù
+                <i class="fa-solid fa-arrow-left"></i> Back to Menù
             </a>
             <div class="card">
                 <div class="card-header">
