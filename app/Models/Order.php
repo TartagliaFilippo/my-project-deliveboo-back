@@ -9,8 +9,8 @@ class Order extends Model
 {
     use HasFactory;
 
-    public function restaurant()
+    public function dishes()
     {
-        return $this->belongsTo(Restaurant::class);
+        return $this->belongsTo(Dish::class);
     }
 }
