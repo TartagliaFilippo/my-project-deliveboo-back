@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\RestaurantController;
 use App\Http\Controllers\Api\TypeController;
 use App\Http\Controllers\Api\DishController;
+use App\Http\Controllers\Api\OrderController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,5 @@ Route::apiResource("types", TypeController::class)->only(["index", "show"]);
 
 Route::get('/get-restaurants-by-types', [RestaurantController::class, 'restaurantsByTypes']);
 Route::get('/restaurant/{restaurant_id}/dishes', [DishController::class, 'dishesByRestaurant']);
+
+Route::post('/orders', [OrderController::class, 'store']);

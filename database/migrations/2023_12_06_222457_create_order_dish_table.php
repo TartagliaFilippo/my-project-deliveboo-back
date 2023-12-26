@@ -5,32 +5,37 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('order_dish', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('order_id');
-            $table->unsignedBigInteger('dish_id');
-            $table->integer('quantity');
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up()
+  {
+    Schema::create('dish_order', function (Blueprint $table) {
+      $table->id();
 
-            // Definizione delle chiavi esterne
-            $table->foreign('order_id')->references('id')->on('orders');
-            $table->foreign('dish_id')->references('id')->on('dishes');
-        });
-    }
+      $table->foreignId('dish_id')
+        ->constrained()
+        ->cascadeOnDelete();
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('order_dish');
-    }
+      $table->foreignId('order_id')
+        ->constrained()
+        ->cascadeOnDelete();
+
+      $table->integer('quantity');
+
+      $table->timestamps();
+    });
+  }
+
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down()
+  {
+    Schema::dropIfExists('dish_order');
+  }
 };
