@@ -26,3 +26,5 @@ Route::get('/get-restaurants-by-types', [RestaurantController::class, 'restauran
 Route::get('/restaurant/{restaurant_id}/dishes', [DishController::class, 'dishesByRestaurant']);
 
 Route::post('/orders', [OrderController::class, 'store']);
+Route::get('/generate', [OrderController::class, 'Generate']);
+Route::post('/payment', [OrderController::class, 'MakePayment']);
