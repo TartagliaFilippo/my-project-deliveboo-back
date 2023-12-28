@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DishController;
-use App\Http\Controllers\Guest\OrderController;
+use App\Http\Controllers\Admin\OrderController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\PageController as AdminPageController;
@@ -21,8 +21,6 @@ use App\Http\Controllers\Admin\PlateController;
 */
 
 Route::get('/', [GuestPageController::class, 'index'])->name('guest.home');
-Route::get('/orders/create', [OrderController::class, 'create'])->name('guest.orders.create');
-Route::post('/orders', [OrderController::class, 'store'])->name('guest.orders.store');
 
 Route::middleware(['auth', 'verified'])
   ->prefix('admin')
@@ -35,6 +33,7 @@ Route::middleware(['auth', 'verified'])
     Route::post('/restaurants', [RestaurantController::class, 'store'])->name('restaurants.store');
     Route::resource('dishes', DishController::class);
     Route::patch('/dishes/{dish}/visibility', [DishController::class, 'visibility'])->name('dishes.visibility');
+    Route::get('/orders', [OrderController::class, 'showOrders'])->name('orders.index');
   });
 
 require __DIR__ . '/auth.php';

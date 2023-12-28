@@ -10,9 +10,6 @@
     <div class="wrapper-home">
         <section class="container d-flex flex-column">
             <h1>Restaurants registered on our platform</h1>
-            <a href="{{ route('guest.orders.create') }}" class="btn btn-warning align-self-end my-3">
-                <i class="fa-solid fa-plus"></i> Make a Order
-            </a>
             <div class="row my-3">
                 @if ($restaurants)
                     @foreach ($restaurants as $restaurant)

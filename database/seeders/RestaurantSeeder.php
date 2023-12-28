@@ -16,17 +16,19 @@ class RestaurantSeeder extends Seeder
 	 */
 	public function run()
 	{
-		$userId = User::first()->id;
+		$_restaurants = config('restaurants');
 
-		$restaurant = new Restaurant();
-		$restaurant->user_id = $userId;
-		$restaurant->name = "Il mio ristorante";
-		$restaurant->address = 'Via dei ristoratori';
-		$restaurant->address_number = '38b';
-		$restaurant->image = 'ristorante.webp';
-		$restaurant->description = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore veritatis odio sint accusamus velit impedit quaerat unde cumque a';
-		$restaurant->phone = '3495410451';
+		foreach ($_restaurants as $_restaurant) {
+			$restaurant = new Restaurant();
+			$restaurant->user_id = $_restaurant['user_id'];
+			$restaurant->name = $_restaurant['name'];
+			$restaurant->address = $_restaurant['address'];
+			$restaurant->address_number = $_restaurant['address_number'];
+			$restaurant->image = $_restaurant['image'];
+			$restaurant->description = $_restaurant['description'];
+			$restaurant->phone = $_restaurant['phone'];
 
-		$restaurant->save();
+			$restaurant->save();
+		}
 	}
 }

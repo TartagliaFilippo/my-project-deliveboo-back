@@ -19,6 +19,7 @@ class OrderController extends Controller
   public function store(Request $request)
   {
     $request->validate([
+      'restaurant_id' => 'required|numeric',
       'name' => 'required|string',
       'lastname' => 'required|string',
       'email' => 'nullable|email',
@@ -30,6 +31,7 @@ class OrderController extends Controller
     ]);
 
     $order = Order::create([
+      'restaurant_id' => $request->restaurant_id,
       'name' => $request->name,
       'lastname' => $request->lastname,
       'email' => $request->email,

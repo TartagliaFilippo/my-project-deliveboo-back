@@ -14,7 +14,7 @@ return new class extends Migration {
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId('restaurant_id')->constrained();
+            $table->foreignId('restaurant_id')->constrained();
             $table->string('name', 50);
             $table->string('lastname', 50);
             $table->string('email');
@@ -33,10 +33,10 @@ return new class extends Migration {
      */
     public function down()
     {
-        // Schema::table('orders', function (Blueprint $table) {
-        //     $table->dropForeign(['restaurant_id']);
-        //     $table->dropColumn('restaurant_id');
-        // });
+        Schema::table('orders', function (Blueprint $table) {
+            $table->dropForeign(['restaurant_id']);
+            $table->dropColumn('restaurant_id');
+        });
 
         Schema::dropIfExists('orders');
     }

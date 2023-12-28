@@ -6,6 +6,7 @@
             <h1>Your Restaurant</h1>
             @if ($restaurant)
                 <div class="row">
+                    <a class="btn btn-primary" href="{{ route('admin.orders.index') }}">Look your orders</a>
                     <div class="col-12 d-flex justify-content-center">
                         <div class="card w-50 my-3">
                             <img src="{{ asset('/storage/' . $restaurant->image) }}" class="card-img-top img-fluid"
