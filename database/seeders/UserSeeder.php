@@ -10,20 +10,25 @@ use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
-    {
-        $user = new User;
+  /**
+   * Run the database seeds.
+   *
+   * @return void
+   */
+  public function run()
+  {
+    $_users = config('users');
 
-        $user->name = "Admin";
-        $user->lastname = "Admin";
-        $user->email = "Admin@gmail.com";
-        $user->password = Hash::make('password');
-        $user->vat = "12345678901";
-        $user->save();
+    foreach ($_users as $_user) {
+      $user = new User();
+      $user->name = $_user['name'];
+      $user->lastname = $_user['lastname'];
+      $user->email = $_user['email'];
+      $user->password = Hash::make($_user['password']);
+      $user->vat = $_user['vat'];
+
+      $user->save();
     }
+
+  }
 }
