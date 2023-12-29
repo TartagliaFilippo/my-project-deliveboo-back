@@ -5,8 +5,9 @@
         <div class="container">
             <h1>Your Restaurant</h1>
             @if ($restaurant)
-                <div class="row">
-                    <a class="btn btn-primary" href="{{ route('admin.orders.index') }}">Look your orders</a>
+                <div class="row justify-content-end">
+                    <a class="btn btn-primary w-auto" href="{{ route('admin.orders.index') }}">Look at your
+                        orders</a>
                     <div class="col-12 d-flex justify-content-center">
                         <div class="card w-50 my-3">
                             <img src="{{ asset('/storage/' . $restaurant->image) }}" class="card-img-top img-fluid"
@@ -20,13 +21,17 @@
                                             <span class="badge text-bg-info">{{ $type->name }}</span>
                                         @endforeach
                                     </p>
-                                    <p class="card-text">{{ $restaurant->address }}, {{ $restaurant->address_number }}
-                                    </p>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">Address:</h6>
+                                    <p class="card-text">{{ $restaurant->address }}, {{ $restaurant->address_number }}</p>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">Description:</h6>
                                     <p class="card-text text-center">{{ $restaurant->description }}</p>
                                     <a href="{{ route('admin.dishes.index') }}" class="btn btn-primary mb-3">Look your
                                         menù</a>
                                     <div class="phone">
-                                        <span class="badge text-bg-success">{{ $restaurant->phone }}</span>
+                                        <h6 class="card-subtitle mb-2 text-body-secondary">
+                                            Phone Number:
+                                            <span class="badge text-bg-success">{{ $restaurant->phone }}</span>
+                                        </h6>
                                     </div>
                                 </div>
                             </div>

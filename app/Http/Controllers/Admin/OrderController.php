@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
@@ -23,7 +24,22 @@ class OrderController extends Controller
             ->orderByDesc('created_at')
             ->get();
 
+        $chartData = $this->prepareChartData();
+
         //passo l'id del ristorante specifico e i relativi ordini
-        return view('admin.orders.index', compact('orders', 'userRestaurant_id'));
+        return view('admin.orders.index', compact('orders', 'userRestaurant_id', 'chartData'));
+    }
+
+    public function prepareChartData()
+    {
+        $data = Order::select(
+            DB::raw('MONTH(created_at) as month'),
+            DB::raw('YEAR(created_at) as year'),
+            DB::raw('SUM(total) as total')
+        )
+            ->groupBy(DB::raw('YEAR(created_at)'), DB::raw('MONTH(created_at)'))
+            ->get();
+
+        return $data;
     }
 }

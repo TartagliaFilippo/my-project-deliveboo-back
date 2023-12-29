@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Deliveboo') }}</title>
 
 
     <!-- Fonts -->
@@ -31,7 +31,6 @@
     </div>
     @yield('modals')
     @yield('scripts')
-    @yield('modals')
 </body>
 
 </html>

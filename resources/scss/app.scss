@@ -1,13 +1,13 @@
 @import "~bootstrap/scss/bootstrap";
 
-// Index restaurants
-
+// index restaurants
 .wrapper-restaurants {
     img {
         max-width: 100%;
     }
 }
 
+// toggle visibility
 .visibility-container {
     .switch {
         position: relative;
@@ -67,5 +67,20 @@
 
     .slider.round:before {
         border-radius: 50%;
+    }
+}
+
+// index orders
+.wrapper-order {
+    .layout-base {
+        display: flex;
+        gap: 30px;
+
+        .left-section {
+            width: 60%;
+        }
+        .right-section {
+            width: 40%;
+        }
     }
 }

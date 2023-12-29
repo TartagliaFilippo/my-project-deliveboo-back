@@ -37,8 +37,8 @@
                             </div>
                             <div class="card-body d-flex flex-column align-items-center">
                                 <h6 class="card-subtitle mb-2 text-body-secondary">Ingredients:</h6>
-                                <p class="card-text">{{ $dish->ingredients }}
-                                </p>
+                                <p class="card-text">{{ $dish->ingredients }}</p>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">Description:</h6>
                                 <p class="card-text text-center">{{ $dish->description }}</p>
                                 <p class="fw-bold">Price: {{ $dish->price }} €</p>
                             </div>
@@ -57,20 +57,6 @@
             </div>
         </div>
     </div>
-@endsection
-
-@section('scripts')
-    <script>
-        const checkboxesVisibility = document.getElementsByClassName('checkbox-visibility');
-        console.log(checkboxesVisibility);
-        for (checkbox of checkboxesVisibility) {
-            checkbox.addEventListener('click', function() {
-                const idPlate = this.getAttribute('data-id');
-                const form = document.getElementById('form-visibility-' + idPlate);
-                form.submit();
-            })
-        }
-    </script>
 @endsection
 
 @section('modals')
@@ -97,4 +83,18 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        const checkboxesVisibility = document.getElementsByClassName('checkbox-visibility');
+        console.log(checkboxesVisibility);
+        for (checkbox of checkboxesVisibility) {
+            checkbox.addEventListener('click', function() {
+                const idPlate = this.getAttribute('data-id');
+                const form = document.getElementById('form-visibility-' + idPlate);
+                form.submit();
+            })
+        }
+    </script>
 @endsection

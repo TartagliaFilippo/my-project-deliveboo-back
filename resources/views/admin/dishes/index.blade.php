@@ -7,9 +7,9 @@
 @endsection
 
 @section('content')
-    <div class="wrapper-restaurants">
+    <div class="wrapper-index-dishes">
         <div class="container d-flex flex-column">
-            <h1>Your Restaurant</h1>
+            <h1>Your Dishes</h1>
             <a href="{{ route('admin.restaurants.index') }}" class="btn btn-primary align-self-end mt-3 mb-1">
                 <i class="fa-solid fa-arrow-left"></i> Back to Restaurant
             </a>
@@ -19,10 +19,10 @@
                 </a>
             @endif
             @if (!$dishes->isEmpty())
-                <div class="row flex-wrap">
+                <div class="row">
                     @foreach ($dishes as $dish)
-                        <div class="col-4 my-3 ">
-                            <div class="card">
+                        <div class="col-4 my-3">
+                            <div class="card h-100">
                                 <img src="{{ asset('/storage/' . $dish->image) }}" class="card-img-top img-fluid"
                                     alt="...">
                                 <div class="card-body d-flex flex-column">
@@ -86,20 +86,6 @@
     </div>
 @endsection
 
-@section('scripts')
-    <script>
-        const checkboxesVisibility = document.getElementsByClassName('checkbox-visibility');
-        console.log(checkboxesVisibility);
-        for (checkbox of checkboxesVisibility) {
-            checkbox.addEventListener('click', function() {
-                const idPlate = this.getAttribute('data-id');
-                const form = document.getElementById('form-visibility-' + idPlate);
-                form.submit();
-            })
-        }
-    </script>
-@endsection
-
 @section('modals')
     @foreach ($dishes as $dish)
         <div class="modal fade" id="delete-modal-{{ $dish->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -126,4 +112,18 @@
             </div>
         </div>
     @endforeach
+@endsection
+
+@section('scripts')
+    <script>
+        const checkboxesVisibility = document.getElementsByClassName('checkbox-visibility');
+        console.log(checkboxesVisibility);
+        for (checkbox of checkboxesVisibility) {
+            checkbox.addEventListener('click', function() {
+                const idPlate = this.getAttribute('data-id');
+                const form = document.getElementById('form-visibility-' + idPlate);
+                form.submit();
+            })
+        }
+    </script>
 @endsection
