@@ -7,7 +7,7 @@ return [
     'ingredients' => 'Spaghetti, eggs, Pecorino Romano cheese, pancetta, black pepper.',
     'description' => 'Classic Roman pasta dish with a creamy sauce made of eggs, cheese, and pancetta.',
     'price' => '12.99',
-    'image' => 'le devo inserire',
+    'image' => 'carbonara.jpg',
     'visibility' => '1',
   ],
   [
@@ -16,7 +16,7 @@ return [
     'ingredients' => 'Veal cutlets, prosciutto, sage, white wine, butter.',
     'description' => 'Veal cutlets topped with prosciutto and sage, cooked in a flavorful wine and butter sauce.',
     'price' => '16.50',
-    'image' => 'le devo inserire',
+    'image' => 'Saltimbocca-alla-romana.jpg',
     'visibility' => '1',
   ],
   [
@@ -25,7 +25,7 @@ return [
     'ingredients' => 'Arborio rice, mushrooms, Parmesan cheese, broth, herbs.',
     'description' => 'Creamy risotto cooked with assorted mushrooms and Parmesan cheese.',
     'price' => '14.75',
-    'image' => 'le devo inserire',
+    'image' => 'risotto-ai-funghi.jpg',
     'visibility' => '1',
   ],
   [
@@ -34,7 +34,7 @@ return [
     'ingredients' => 'Bread, tomatoes, garlic, basil, olive oil.',
     'description' => 'Grilled bread topped with diced tomatoes, garlic, basil, and drizzled with olive oil.',
     'price' => '8.50',
-    'image' => 'le devo inserire',
+    'image' => 'bruschetta.jpg',
     'visibility' => '0',
   ],
   [
@@ -43,7 +43,7 @@ return [
     'ingredients' => 'Spaghetti, Pecorino Romano cheese, black pepper.',
     'description' => 'Simple yet flavorful pasta dish with cheese and black pepper.',
     'price' => '11.25',
-    'image' => 'le devo inserire',
+    'image' => 'cacio-pepe.jpg',
     'visibility' => '1',
   ],
   [
@@ -52,7 +52,7 @@ return [
     'ingredients' => 'Eggplant, ricotta cheese, tomato sauce, herbs.',
     'description' => 'Eggplant rolls stuffed with creamy ricotta cheese and served with tomato sauce.',
     'price' => '9.99',
-    'image' => 'le devo inserire',
+    'image' => 'involtini-melanzane.jpg',
     'visibility' => '0',
   ],
   [
@@ -61,7 +61,7 @@ return [
     'ingredients' => 'Ladyfingers, coffee, mascarpone cheese, cocoa powder.',
     'description' => 'Classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese.',
     'price' => '7.99',
-    'image' => 'le devo inserire',
+    'image' => 'tiramisu.jpg',
     'visibility' => '1',
   ],
   [
@@ -70,7 +70,7 @@ return [
     'ingredients' => 'Assorted raw fish (salmon, tuna, yellowtail), wasabi, soy sauce.',
     'description' => 'Fresh slices of raw fish served with traditional condiments.',
     'price' => '24.99',
-    'image' => 'le devo inserire',
+    'image' => 'sashimi-platter.jpg',
     'visibility' => '1',
   ],
   [
@@ -79,7 +79,7 @@ return [
     'ingredients' => 'Shrimp tempura, avocado, eel, rice, eel sauce.',
     'description' => 'Inside-out sushi roll filled with tempura shrimp, avocado, and eel, topped with eel sauce.',
     'price' => '18.50',
-    'image' => 'le devo inserire',
+    'image' => 'dragon-roll.jpg',
     'visibility' => '1',
   ],
   [
@@ -88,7 +88,7 @@ return [
     'ingredients' => 'Crab, avocado, cucumber, assorted raw fish slices, rice.',
     'description' => 'California roll topped with an assortment of raw fish slices.',
     'price' => '22.75',
-    'image' => 'le devo inserire',
+    'image' => 'rainbow-roll.jpg',
     'visibility' => '1',
   ],
   [
@@ -97,7 +97,7 @@ return [
     'ingredients' => 'Udon noodles, tempura-fried vegetables (sweet potato, broccoli, shrimp), broth.',
     'description' => 'Japanese noodle soup with tempura-fried vegetables and shrimp.',
     'price' => '15.99',
-    'image' => 'le devo inserire',
+    'image' => 'tempura-udon.jpg',
     'visibility' => '0',
   ],
   [
@@ -106,7 +106,7 @@ return [
     'ingredients' => 'Spicy tuna mix, cucumber, rice, sesame seeds.',
     'description' => 'Sushi roll filled with spicy tuna mix and cucumber.',
     'price' => '14.25',
-    'image' => 'le devo inserire',
+    'image' => 'spicy-tuna-roll.jpg',
     'visibility' => '1',
   ],
   [
@@ -115,7 +115,7 @@ return [
     'ingredients' => 'Sushi rice, raw fish (tuna, salmon), avocado, vegetables, soy sauce.',
     'description' => 'Giant sushi roll filled with a variety of ingredients, wrapped like a burrito.',
     'price' => '17.99',
-    'image' => 'le devo inserire',
+    'image' => 'sushi-burrito.jpg',
     'visibility' => '0',
   ],
   [
@@ -124,7 +124,7 @@ return [
     'ingredients' => 'Miso paste, tofu, seaweed, green onions.',
     'description' => 'Traditional Japanese soup made with fermented soybean paste and other ingredients.',
     'price' => '5.50',
-    'image' => 'le devo inserire',
+    'image' => 'miso-soup.jpg',
     'visibility' => '1',
   ],
   [
@@ -133,7 +133,7 @@ return [
     'ingredients' => 'Chicken, red wine, mushrooms, onions, bacon.',
     'description' => 'Chicken braised in red wine with mushrooms, onions, and bacon.',
     'price' => '19.99',
-    'image' => 'le devo inserire',
+    'image' => 'coq-au-vin.jpg',
     'visibility' => '1',
   ],
   [
@@ -142,7 +142,7 @@ return [
     'ingredients' => 'Assorted seafood (fish, shrimp, mussels), tomatoes, herbs, saffron.',
     'description' => 'Traditional Provençal fish stew with a mix of seafood and aromatic herbs.',
     'price' => '29.50',
-    'image' => 'le devo inserire',
+    'image' => 'bouillabaisse.jpg',
     'visibility' => '1',
   ],
   [
@@ -151,7 +151,7 @@ return [
     'ingredients' => 'Duck breast, orange sauce, Grand Marnier.',
     'description' => 'Roast duck served with a sweet and tangy orange sauce.',
     'price' => '26.75',
-    'image' => 'le devo inserire',
+    'image' => 'duck-orange.jpg',
     'visibility' => '1',
   ],
   [
@@ -160,7 +160,7 @@ return [
     'ingredients' => 'Snails, garlic butter, parsley.',
     'description' => 'Burgundy-style snails cooked with garlic and butter.',
     'price' => '12.99',
-    'image' => 'le devo inserire',
+    'image' => 'escargots.jpg',
     'visibility' => '0',
   ],
   [
@@ -169,7 +169,7 @@ return [
     'ingredients' => 'Tomatoes, eggplant, zucchini, bell peppers, onions.',
     'description' => 'Provencal vegetable stew made with tomatoes, eggplant, and various vegetables.',
     'price' => '16.25',
-    'image' => 'le devo inserire',
+    'image' => 'ratatouille.jpg',
     'visibility' => '1',
   ],
   [
@@ -178,7 +178,7 @@ return [
     'ingredients' => 'Cream, sugar, vanilla.',
     'description' => 'Rich custard topped with caramelized sugar, a classic French dessert.',
     'price' => '9.99',
-    'image' => 'le devo inserire',
+    'image' => 'creme-brulee.jpg',
     'visibility' => '0',
   ],
   [
@@ -187,7 +187,7 @@ return [
     'ingredients' => 'Apples, puff pastry, caramel.',
     'description' => 'Upside-down caramelized apple tart, served with whipped cream or ice cream.',
     'price' => '14.50',
-    'image' => 'le devo inserire',
+    'image' => 'tarte-tatin.jpg',
     'visibility' => '1',
   ],
   [
@@ -196,7 +196,7 @@ return [
     'ingredients' => 'Various cuts of beef (ribs, chorizo, flank steak).',
     'description' => 'Traditional Argentine barbecue featuring different cuts of grilled meats.',
     'price' => '35.99',
-    'image' => 'le devo inserire',
+    'image' => 'asado.jpg',
     'visibility' => '1',
   ],
   [
@@ -205,7 +205,7 @@ return [
     'ingredients' => 'Pastry dough, beef/chicken/cheese filling, onions, spices.',
     'description' => 'Baked pastries filled with a variety of savory ingredients.',
     'price' => '3.50',
-    'image' => 'le devo inserire',
+    'image' => 'empanadas.jpg',
     'visibility' => '1',
   ],
   [
@@ -214,7 +214,7 @@ return [
     'ingredients' => 'Flank steak, filling (vegetables, eggs, herbs).',
     'description' => 'Stuffed and rolled flank steak, grilled and thinly sliced.',
     'price' => '22.75',
-    'image' => 'le devo inserire',
+    'image' => 'matambre.jpg',
     'visibility' => '1',
   ],
   [
@@ -223,7 +223,7 @@ return [
     'ingredients' => 'Breaded beef cutlet, ham, tomato sauce, mozzarella cheese.',
     'description' => 'Breaded and fried beef cutlet topped with ham, tomato sauce, and ',
     'price' => '18.50',
-    'image' => 'le devo inserire',
+    'image' => 'milanesa-napolitana.jpg',
     'visibility' => '0',
   ],
   [
@@ -232,7 +232,7 @@ return [
     'ingredients' => 'Provolone cheese, herbs.',
     'description' => 'Grilled provolone cheese often topped with herbs and spices.',
     'price' => '14.99',
-    'image' => 'le devo inserire',
+    'image' => 'provoleta.jpg',
     'visibility' => '1',
   ],
   [
@@ -241,7 +241,7 @@ return [
     'ingredients' => 'Parsley, garlic, vinegar, spices.',
     'description' => 'Flavorful sauce commonly served with grilled meats.',
     'price' => '5.25',
-    'image' => 'le devo inserire',
+    'image' => 'chimichurri.jpg',
     'visibility' => '0',
   ],
   [
@@ -250,7 +250,7 @@ return [
     'ingredients' => 'Milk, sugar.',
     'description' => 'Sweet caramel spread, a popular dessert topping in Argentina.',
     'price' => '7.50',
-    'image' => 'le devo inserire',
+    'image' => 'dulce-de-leche.jpg',
     'visibility' => '1',
   ],
 ];

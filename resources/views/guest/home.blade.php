@@ -13,9 +13,10 @@
             <div class="row my-3">
                 @if ($restaurants)
                     @foreach ($restaurants as $restaurant)
-                        <div class="col-4">
-                            <div class="card p-3">
-                                <img src="{{ asset('/storage/' . $restaurant->image) }}" class="card-img-top img-fluid">
+                        <div class="col-4 mb-3">
+                            <div class="card h-100">
+                                <img src="{{ asset('/storage/restaurants/' . $restaurant->image) }}"
+                                    class="card-img-top img-fluid">
                                 <div class="card-body">
                                     <h5 class="card-title text-center">{{ $restaurant->name }}</h5>
                                     <p class="card-text text-center">{{ $restaurant->description }}</p>

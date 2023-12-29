@@ -10,8 +10,8 @@
                         orders</a>
                     <div class="col-12 d-flex justify-content-center">
                         <div class="card w-50 my-3">
-                            <img src="{{ asset('/storage/' . $restaurant->image) }}" class="card-img-top img-fluid"
-                                alt="...">
+                            <img src="{{ asset('/storage/restaurants/' . $restaurant->image) }}"
+                                class="card-img-top img-fluid" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title text-center">{{ $restaurant->name }}</h5>
                                 <div class="card-body d-flex flex-column align-items-center">

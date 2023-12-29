@@ -23,7 +23,7 @@
                     @foreach ($dishes as $dish)
                         <div class="col-4 my-3">
                             <div class="card h-100">
-                                <img src="{{ asset('/storage/' . $dish->image) }}" class="card-img-top img-fluid"
+                                <img src="{{ asset('/storage/dishes/' . $dish->image) }}" class="card-img-top img-fluid"
                                     alt="...">
                                 <div class="card-body d-flex flex-column">
                                     <div class="card-title d-flex justify-content-between align-items-center">
@@ -46,8 +46,8 @@
                                     </div>
                                     <div class="card-body d-flex flex-column align-items-center">
                                         <h6 class="card-subtitle mb-2 text-body-secondary">Ingredients:</h6>
-                                        <p class="card-text">{{ $dish->ingredients }}
-                                        </p>
+                                        <p class="card-text text-center">{{ $dish->ingredients }}</p>
+                                        <h6 class="card-subtitle mb-2 text-body-secondary">Description:</h6>
                                         <p class="card-text text-center">{{ $dish->description }}</p>
                                         <p class="fw-bold">Price: {{ $dish->price }} €</p>
                                     </div>
