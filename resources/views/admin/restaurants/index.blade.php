@@ -5,11 +5,11 @@
         <div class="container">
             <h1>Your Restaurant</h1>
             @if ($restaurant)
-                <div class="row justify-content-end">
-                    <a class="btn btn-primary w-auto" href="{{ route('admin.orders.index') }}">Look at your
+                <div class="row justify-content-end flex-lg-column align-items-lg-center">
+                    <a class="btn btn-primary w-auto align-self-lg-end" href="{{ route('admin.orders.index') }}">Look at your
                         orders</a>
-                    <div class="col-12 d-flex justify-content-center">
-                        <div class="card w-50 my-3">
+                    <div class="col-12 col-lg-6 d-flex justify-content-center">
+                        <div class="card my-3">
                             <img src="{{ asset('/storage/restaurants/' . $restaurant->image) }}"
                                 class="card-img-top img-fluid" alt="...">
                             <div class="card-body">

@@ -14,7 +14,7 @@
                 Back to Menù
             </a>
             <div class="row justify-content-center">
-                <div class="col-6 my-4">
+                <div class="col-12 col-lg-6 my-4">
                     <div class="card">
                         <img src="{{ asset('/storage/dishes/' . $dish->image) }}" class="card-img-top img-fluid"
                             alt="...">

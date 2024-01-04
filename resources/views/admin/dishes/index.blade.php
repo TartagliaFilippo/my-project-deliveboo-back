@@ -21,7 +21,7 @@
             @if (!$dishes->isEmpty())
                 <div class="row">
                     @foreach ($dishes as $dish)
-                        <div class="col-4 my-3">
+                        <div class="col-12 col-md-6 col-lg-4 my-3">
                             <div class="card h-100">
                                 <img src="{{ asset('/storage/dishes/' . $dish->image) }}" class="card-img-top img-fluid"
                                     alt="...">
@@ -44,22 +44,22 @@
                                             </form>
                                         </div>
                                     </div>
-                                    <div class="card-body d-flex flex-column align-items-center">
+                                    <div class="card-body d-flex flex-column align-items-center g.2">
                                         <h6 class="card-subtitle mb-2 text-body-secondary">Ingredients:</h6>
                                         <p class="card-text text-center">{{ $dish->ingredients }}</p>
                                         <h6 class="card-subtitle mb-2 text-body-secondary">Description:</h6>
                                         <p class="card-text text-center">{{ $dish->description }}</p>
                                         <p class="fw-bold">Price: {{ $dish->price }} €</p>
                                     </div>
-                                    <div class="links-sed d-flex justify-content-between">
-                                        <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-primary">
+                                    <div class="links-sed d-flex flex-column">
+                                        <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-primary my-1">
                                             <i class="fa-solid fa-eye"></i> Show Dish
                                         </a>
-                                        <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-warning">
+                                        <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-warning my-1">
                                             <i class="fa-solid fa-pen-to-square"></i> Edit Dish
                                         </a>
                                         <a href="javascript:void(0)" data-bs-toggle="modal"
-                                            data-bs-target="#delete-modal-{{ $dish->id }}" class="btn btn-danger">
+                                            data-bs-target="#delete-modal-{{ $dish->id }}" class="btn btn-danger my-1">
                                             <i class="fa-solid fa-trash"></i> Delete Dish
                                         </a>
                                     </div>

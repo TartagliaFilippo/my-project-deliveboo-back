@@ -13,7 +13,7 @@
             <div class="row my-3">
                 @if ($restaurants)
                     @foreach ($restaurants as $restaurant)
-                        <div class="col-4 mb-3">
+                        <div class="col-12 col-md-6 col-lg-4 mb-3">
                             <div class="card h-100">
                                 <img src="{{ asset('/storage/restaurants/' . $restaurant->image) }}"
                                     class="card-img-top img-fluid">

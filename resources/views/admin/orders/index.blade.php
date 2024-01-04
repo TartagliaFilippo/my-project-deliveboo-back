@@ -7,8 +7,8 @@
             @if ($orders->isEmpty())
                 <p>There are no orders in your restaurant</p>
             @else
-                <div class="layout-base">
-                    <div class="left-section">
+                <div class="layout-base flex-column-reverse flex-lg-row">
+                    <div class="left-section col-12 col-lg-8">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -40,7 +40,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="right-section">
+                    <div class="right-section col-12 col-lg-4">
                         <canvas id="ordersChart" width="100" height="50"></canvas>
                     </div>
                 </div>

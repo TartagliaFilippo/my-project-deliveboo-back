@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center my-5">
-            <div class="card text-center w-50 px-0">
+            <div class="card text-center col-12 col-lg-8 px-0">
                 <div class="card-header">Welcome!</div>
                 <div class="card-body">
                     @if (session('status'))
