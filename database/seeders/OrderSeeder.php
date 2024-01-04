@@ -16,20 +16,20 @@ class OrderSeeder extends Seeder
      */
     public function run()
     {
-        $restaurantId = Restaurant::first()->id;
+        $_orders = config('orders');
 
-        $order = new Order();
-        $order->restaurant_id = $restaurantId;
-        $order->name = 'marco';
-        $order->lastname = 'grandi';
-        $order->email = 'marco@grandi.it';
-        $order->phone = '34567289765';
-        $order->address = 'vai del busto';
-        $order->address_number = '34b';
-        $order->success = 1;
-        $order->date = '2023-12-04 20:19:09';
-        $order->total = '10.00';
+        foreach ($_orders as $_order) {
+            $order = new Order();
+            $order->restaurant_id = $_order['restaurant_id'];
+            $order->name = $_order['name'];
+            $order->lastname = $_order['lastname'];
+            $order->email = $_order['email'];
+            $order->phone = $_order['phone'];
+            $order->address = $_order['address'];
+            $order->address_number = $_order['address_number'];
+            $order->total = $_order['total'];
 
-        $order->save();
+            $order->save();
+        }
     }
 }
