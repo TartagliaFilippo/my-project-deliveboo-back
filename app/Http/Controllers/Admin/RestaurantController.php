@@ -51,8 +51,9 @@ class RestaurantController extends Controller
 
     // salvo le immagini nello storage
     if ($request->hasFile('image')) {
-      $image_path = Storage::put('uploads/restaurants/image', $data['image']);
-      $restaurant->image = $image_path;
+      $image_path = Storage::put('restaurants', $data['image']);
+      $file_name = basename($image_path);
+      $restaurant->image = $file_name;
     }
 
     $restaurant->save();

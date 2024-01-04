@@ -16,7 +16,8 @@
             <div class="row justify-content-center">
                 <div class="col-6 my-4">
                     <div class="card">
-                        <img src="{{ asset('/storage/' . $dish->image) }}" class="card-img-top img-fluid" alt="...">
+                        <img src="{{ asset('/storage/dishes/' . $dish->image) }}" class="card-img-top img-fluid"
+                            alt="...">
                         <div class="card-body d-flex flex-column">
                             <div class="card-title d-flex justify-content-between align-items-center">
                                 <h3>{{ $dish->name }}</h3>

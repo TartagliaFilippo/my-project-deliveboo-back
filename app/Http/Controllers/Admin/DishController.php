@@ -58,8 +58,9 @@ class DishController extends Controller
 
     // salvo le immagini nello storage
     if ($request->hasFile('image')) {
-      $image_path = Storage::put('uploads/dishes/image', $data['image']);
-      $dish->image = $image_path;
+      $image_path = Storage::put('dishes', $data['image']);
+      $file_name = basename($image_path);
+      $dish->image = $file_name;
     }
 
     $dish->save();
@@ -105,8 +106,9 @@ class DishController extends Controller
 
     // salvo le immagini nello storage
     if ($request->hasFile('image')) {
-      $image_path = Storage::put('uploads/dishes/image', $data['image']);
-      $dish->image = $image_path;
+      $image_path = Storage::put('dishes', $data['image']);
+      $file_name = basename($image_path);
+      $dish->image = $file_name;
     }
 
     $dish->save();
