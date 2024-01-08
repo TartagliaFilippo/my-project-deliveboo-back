@@ -18,25 +18,28 @@ class OrderController extends Controller
 
         //recupero tutti gli ordini con i relativi piatti
         $orders = Order::where('restaurant_id', $userRestaurant_id)
-            ->with(['dishes' => function ($query) {
-                $query->withPivot('quantity');
-            }])
+            ->with([
+                'dishes' => function ($query) {
+                    $query->withPivot('quantity');
+                }
+            ])
             ->orderByDesc('created_at')
             ->get();
 
-        $chartData = $this->prepareChartData();
+        $chartData = $this->prepareChartData($userRestaurant_id);
 
         //passo l'id del ristorante specifico e i relativi ordini
         return view('admin.orders.index', compact('orders', 'userRestaurant_id', 'chartData'));
     }
 
-    public function prepareChartData()
+    public function prepareChartData($restaurantId)
     {
-        $data = Order::select(
-            DB::raw('MONTH(created_at) as month'),
-            DB::raw('YEAR(created_at) as year'),
-            DB::raw('SUM(total) as total')
-        )
+        $data = Order::where('restaurant_id', $restaurantId)
+            ->select(
+                DB::raw('MONTH(created_at) as month'),
+                DB::raw('YEAR(created_at) as year'),
+                DB::raw('SUM(total) as total')
+            )
             ->groupBy(DB::raw('YEAR(created_at)'), DB::raw('MONTH(created_at)'))
             ->get();
 
